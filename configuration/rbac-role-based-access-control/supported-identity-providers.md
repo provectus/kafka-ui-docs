@@ -75,3 +75,18 @@ Not yet supported, see [Issue 3741](https://github.com/provectus/kafka-ui/issues
           type: group
           value: "admin_staff"
 ```
+
+### Okta
+
+You can map Okta Groups to roles. First, confirm that your okta administrator has included the `group` claim or the groups will not be passed in the auth token.
+
+Ensure `roles-field` in the auth config is set to `groups` and that `groups` is included in the `scope`, see [here](../authentication/oauth2.md###Okta) for more details.
+
+Configure the role mapping to the okta group via generic provider mentioned above:
+
+```yaml
+      subjects:
+        - provider: oauth
+          type: role
+          value: "<okta-group-name>"
+```
