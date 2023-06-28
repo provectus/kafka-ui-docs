@@ -4,11 +4,11 @@ description: Examples of setups for different OAuth providers
 
 # OAuth2
 
-In general, the structure of the config looks like this:
+## Generic configuration
 
-For specific providers (like github (non-enterprise) and google, see further) you don't have to specify URLs as they're [well-known](https://github.com/spring-projects/spring-security/blob/main/config/src/main/java/org/springframework/security/config/oauth2/client/CommonOAuth2Provider.java#L35).
+In general, the structure of the Oauth2 config looks as follows:
 
-```
+```yaml
 auth:
   type: OAUTH2
   oauth2:
@@ -28,6 +28,14 @@ auth:
           type: <provider_type> # fill this if you're gonna use RBAC AND the type is one of the supported RBAC providers
           roles-field: groups # required for RBAC, a field name in OAuth token which will contain user's roles/groups
 ```
+
+## Service Discovery
+
+For specific providers like Github (non-enterprise) and Google ([see the current list](https://github.com/spring-projects/spring-security/blob/main/config/src/main/java/org/springframework/security/config/oauth2/client/CommonOAuth2Provider.java#L35)), you don't have to specify URIs as they're well known.
+
+Furthermore, other providers that support [OIDC Service Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html#IssuerDiscovery) allow fetching URIs configuration from a `/.well-known/openid-configuration` endpoint. Depending on your setup, you may only have to set the `issuer-uri` of your provider to enable OIDC Service Discovery.
+
+## Provider config examples
 
 ### Cognito
 
@@ -159,4 +167,23 @@ auth:
         custom-params:
           type: oauth
           roles-field: groups # required for RBAC
+```
+
+### Keycloak
+
+```yaml
+auth:
+  type: OAUTH2
+  oauth2:
+    client:
+      keycloak:
+        clientId: xxx
+        clientSecret: yyy
+        scope: openid
+        issuer-uri: https://<keycloak_instance>/auth/realms/<realm>
+        user-name-attribute: preferred_username
+        client-name: keycloak
+        provider: keycloak
+        custom-params:
+          type: keycloak
 ```
