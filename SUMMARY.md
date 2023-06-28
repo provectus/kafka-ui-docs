@@ -21,7 +21,7 @@
   * [Without Docker](development/building/without-docker.md)
 * [WIP: Testing](development/wip-testing.md)
 
-## 👷♂ Configuration
+## 👷♂ 👷♂ Configuration
 
 * [Quick Start](configuration/quick-start/README.md)
   * [via AWS Marketplace](configuration/quick-start/via-aws-marketplace.md)
@@ -30,7 +30,8 @@
 * [Compose examples](configuration/compose-examples.md)
 * [Helm charts](configuration/helm-charts/README.md)
   * [Quick start](configuration/helm-charts/quick-start.md)
-  * [Configuration](configuration/helm-charts/configuration.md)
+  * [Configuration](configuration/helm-charts/configuration/README.md)
+    * [SSL example](configuration/helm-charts/configuration/ssl-example.md)
   * [Resource limits](configuration/helm-charts/resource-limits.md)
 * [Misc configuration properties](configuration/misc-configuration-properties.md)
 * [Required Kafka Permissions](configuration/permissions/README.md)
