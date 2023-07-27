@@ -53,12 +53,12 @@ non-json string -> ***
 
 #### MASK
 
-Mask target field's values with specified masking characters, recursively (spaces and line separators will be kept as-is). `pattern` array specifies what symbols will be used to replace upper-case chars, lower-case chars, digits and other symbols correspondingly.
+Mask target field's values with specified masking characters, recursively (spaces and line separators will be kept as-is). `maskingCharsReplacement` array specifies what symbols will be used to replace upper-case chars (index 0), lower-case chars (index 1), digits (index 2) and other symbols (index 3) correspondingly.
 
 ```yaml
 - type: MASK
   fields: [ "id", "name" ]
-  pattern: ["A", "a", "N", "_"]   # optional, default is ["X", "x", "n", "-"]
+  maskingCharsReplacement: ["A", "a", "N", "_"]   # optional, default is ["X", "x", "n", "-"]
   ...
 ```
 
@@ -100,7 +100,7 @@ kafka:
         
         - type: MASK
           fields: [ "name", "surname" ]
-          pattern: ["A", "a", "N", "_"]  #optional
+          maskingCharsReplacement: ["A", "a", "N", "_"]  #optional
           topicValuesPattern: "user-states"
 
         - type: MASK
@@ -125,10 +125,10 @@ KAFKA_CLUSTERS_0_MASKING_1_TOPICVALUESPATTERN: "org-events-.*"
 KAFKA_CLUSTERS_0_MASKING_2_TYPE: MASK
 KAFKA_CLUSTERS_0_MASKING_2_FIELDS_0: "name"
 KAFKA_CLUSTERS_0_MASKING_2_FIELDS_1: "surname"
-KAFKA_CLUSTERS_0_MASKING_2_PATTERN_0: 'A'
-KAFKA_CLUSTERS_0_MASKING_2_PATTERN_1: 'a'
-KAFKA_CLUSTERS_0_MASKING_2_PATTERN_2: 'N'
-KAFKA_CLUSTERS_0_MASKING_2_PATTERN_3: '_'
+KAFKA_CLUSTERS_0_MASKING_2_MASKING_CHARS_REPLACEMENT_0: 'A'
+KAFKA_CLUSTERS_0_MASKING_2_MASKING_CHARS_REPLACEMENT_1: 'a'
+KAFKA_CLUSTERS_0_MASKING_2_MASKING_CHARS_REPLACEMENT_2: 'N'
+KAFKA_CLUSTERS_0_MASKING_2_MASKING_CHARS_REPLACEMENT_3: '_'
 KAFKA_CLUSTERS_0_MASKING_2_TOPICVALUESPATTERN: "user-states"
 
 KAFKA_CLUSTERS_0_MASKING_3_TYPE: MASK
