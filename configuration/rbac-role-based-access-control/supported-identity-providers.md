@@ -10,6 +10,8 @@ Any OAuth provider which is not of the list: Google, GitHub, Cognito.
 
 Set up the auth itself first, docs [here](../authentication/oauth2.md) and [here](../authentication/sso-guide.md)
 
+Don't forget "custom-params.type: oauth".
+
 ```yaml
       subjects:
         - provider: oauth

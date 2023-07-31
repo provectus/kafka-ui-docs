@@ -25,7 +25,7 @@ auth:
         jwk-set-uri: https://yyy/.well-known/jwks.json
         user-name-attribute: <zzz>
         custom-params:
-          type: <provider_type> # fill this if you're gonna use RBAC AND the type is one of the supported RBAC providers
+          type: <provider_type> # fill this if you're gonna use RBAC. Supported values: cognito, google, github, oauth (for other generic providers)
           roles-field: groups # required for RBAC, a field name in OAuth token which will contain user's roles/groups
 ```
 
@@ -33,7 +33,7 @@ auth:
 
 For specific providers like Github (non-enterprise) and Google ([see the current list](https://github.com/spring-projects/spring-security/blob/main/config/src/main/java/org/springframework/security/config/oauth2/client/CommonOAuth2Provider.java#L35)), you don't have to specify URIs as they're well known.
 
-Furthermore, other providers that support [OIDC Service Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html#IssuerDiscovery) allow fetching URIs configuration from a `/.well-known/openid-configuration` endpoint. Depending on your setup, you may only have to set the `issuer-uri` of your provider to enable OIDC Service Discovery.
+Furthermore, other providers that support [OIDC Service Discovery](https://openid.net/specs/openid-connect-discovery-1\_0.html#IssuerDiscovery) allow fetching URIs configuration from a `/.well-known/openid-configuration` endpoint. Depending on your setup, you may only have to set the `issuer-uri` of your provider to enable OIDC Service Discovery.
 
 ## Provider config examples
 
