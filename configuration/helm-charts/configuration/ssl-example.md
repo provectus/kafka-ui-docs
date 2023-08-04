@@ -4,23 +4,23 @@
 
 To implement SSL for kafka-ui you need to provide JKS files into the pod. Here is the instruction on how to do that.
 
-### Create config map with conntent from kafka.truststore.jks and kafka.keystore.jks.
+### Create config map with content from kafka.truststore.jks and kafka.keystore.jks.
 
-Create configmap.yaml file with the following content.
+To create configmap use following command.\
+
 
 ```
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: ssl-files
-  # Specify namespace if needed, uncomment next line and provide namespace
-  #namespace:  {namespace}
-data:
-  kafka.truststore.jks: |
-    ## content of kafka.truststore.jks
-  kafka.keystore.jks: |
-    ## content of kafka.keystore.jks
+kubectl create configmap ssl-files --from-file=kafka.truststore.jks --from-file=kafka.keystore.jks
 ```
+
+If you have specified namespace use command.\
+
+
+```
+kubectl create configmap ssl-files --from-file=kafka.truststore.jks --from-file=kafka.keystore.jks -n {{namespace}
+```
+
+
 
 ### Create secret.
 
