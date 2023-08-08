@@ -89,6 +89,29 @@ auth:
           allowedDomain: provectus.com # for RBAC
 ```
 
+### Azure
+
+```yaml
+kafka:
+  clusters:
+    - name: local
+      bootstrapServers: localhost:9092
+    # ...
+
+auth:
+  type: OAUTH2
+  oauth2:
+    client:
+      azure:
+        clientId: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        clientSecret: "somesecret"
+        scope: openid
+        client-name: azure
+        provider: azure
+        issuer-uri: "https://login.microsoftonline.com/{tenant_id}/v2.0"
+        jwk-set-uri: "https://login.microsoftonline.com/{tenant_id}/discovery/v2.0/keys"
+```
+
 ### GitHub
 
 Example of callback URL for github OAuth app settings:
