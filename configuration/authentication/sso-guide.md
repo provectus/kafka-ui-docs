@@ -75,10 +75,13 @@ docker run -p 8080:8080 \
         -e KAFKA_CLUSTERS_0_ZOOKEEPER="${zookeeper_servers}" \
         -e KAFKA_CLUSTERS_0_KAFKACONNECT_0_ADDRESS="${kafka_connect_servers}"
         -e AUTH_TYPE=OAUTH2 \
-        -e SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_AUTH0_CLIENTID=uhvaPKIHU4ZF8Ne4B6PGvF0hWW6OcUSB \
-        -e SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_AUTH0_CLIENTSECRET=YXfRjmodifiedTujnkVr7zuW9ECCAK4TcnCio-i \
-        -e SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_AUTH0_SCOPE="https://graph.microsoft.com/User.Read" \
-        -e SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_AUTH0_ISSUER_URI="https://login.microsoftonline.com/{tenant-id}/v2.0" \
+        -e AUTH_OAUTH2_CLIENT_AZURE_CLIENTID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" \
+        -e AUTH_OAUTH2_CLIENT_AZURE_CLIENTSECRET="somesecret" \
+        -e AUTH_OAUTH2_CLIENT_AZURE_SCOPE="openid" \
+        -e AUTH_OAUTH2_CLIENT_AZURE_CLIENTNAME="azure" \
+        -e AUTH_OAUTH2_CLIENT_AZURE_PROVIDER="azure" \
+        -e AUTH_OAUTH2_CLIENT_AZURE_ISSUERURI="https://login.microsoftonline.com/{tenant_id}/v2.0" \
+        -e AUTH_OAUTH2_CLIENT_AZURE_JWKSETURI="https://login.microsoftonline.com/{tenant_id}/discovery/v2.0/keys" \
         -d provectuslabs/kafka-ui:latest"
 ```
 
