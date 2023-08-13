@@ -169,6 +169,30 @@ auth:
           type: github      
 ```
 
+### GitLab
+
+```yaml
+  auth:
+    type: OAUTH2
+    oauth2:
+      client:
+        gitlab:
+          clientId: <GITLAB_APPLICATION_ID>
+          clientSecret: <GITLAB_APPLICATION_SECRET>
+          scope: openid
+          client-name: GitLab
+          provider: gitlab
+          redirect-uri: http://localhost:8080/login/oauth2/code/gitlab
+          authorization-grant-type: authorization_code
+          issuer-uri: https://gitlab.com
+          jwk-set-uri: https://gitlab.com/oauth/discovery/keys
+          user-name-attribute: name
+          custom-params:
+            type: oauth
+```
+
+For self-hosted GitLab, replace `gitlab.com` with your GitLab instance FQDN.
+
 ### Okta
 
 ```yaml
