@@ -4,18 +4,20 @@ description: How to configure AWS IAM Authentication
 
 # AWS IAM
 
-UI for Apache Kafka comes with built-in [aws-msk-iam-auth](https://github.com/aws/aws-msk-iam-auth) library.
+UI for Apache Kafka comes with a built-in [aws-msk-iam-auth](https://github.com/aws/aws-msk-iam-auth) library.
 
-You could pass sasl configs in properties section for each cluster.
+You could pass SASL configs in the properties section for each cluster.
 
 More details could be found here: [aws-msk-iam-auth](https://github.com/aws/aws-msk-iam-auth)
+
+More about permissions: [msk-+serverless-setup.md](../permissions/msk-+serverless-setup.md "mention")
 
 ### Examples:
 
 Please replace
 
 * \<KAFKA\_URL> with broker list
-* \<PROFILE\_NAME> with your aws profile
+* \<PROFILE\_NAME> with your AWS profile
 
 #### Running From Docker Image
 
