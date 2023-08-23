@@ -33,6 +33,7 @@
   * [Configuration](configuration/helm-charts/configuration/README.md)
     * [SSL example](configuration/helm-charts/configuration/ssl-example.md)
   * [Resource limits](configuration/helm-charts/resource-limits.md)
+  * [Sticky sessions](configuration/helm-charts/sticky-sessions.md)
 * [Misc configuration properties](configuration/misc-configuration-properties.md)
 * [Required Kafka Permissions](configuration/permissions/README.md)
   * [Required Kafka ACLs](configuration/configuration/required-acls.md)
