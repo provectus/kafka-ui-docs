@@ -58,7 +58,4 @@ kafka:
 | `TOPIC_RECREATE_MAXRETRIES`                           | Number of attempts of topic creation after topic deletion for topic recreate functionality. Default: 15                                                          |
 | `DYNAMIC_CONFIG_ENABLED`                              | Allow to change application config in runtime. Default: false.                                                                                                   |
 | kafka\_internalTopicPrefix                            | Set a prefix for internal topics. Defaults to "\_".                                                                                                              |
-| kafka.polling.pollTimeoutMs                           | Messages: Used as kafka consumer poll time (default is 1000). Useful if your message viewing fails with a slow broker                                            |
-| kafka.polling.partitionPollTimeout                    | Messages: Used as consumer poll time when polling one specific partition (used for newest first mode). The default is 200. Will increase result generation time. |
-| kafka.polling.noDataEmptyPolls                        | Messages: It's a count of subsequent empty polls after that we assume that no more data is left in the topic/partition. The default is 3.                        |
 | server.reactive.session.timeout                       | Session timeout. If a duration suffix is not specified, seconds will be used.                                                                                    |
