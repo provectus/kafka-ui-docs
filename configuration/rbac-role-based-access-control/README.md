@@ -100,7 +100,7 @@ A list of all the actions for the corresponding resources (please note neither r
 * `topic`: `view`, `create`, `edit`, `delete`, `messages_read`, `messages_produce`, `messages_delete`
 * `consumer`: `view`, `delete`, `reset_offsets`
 * `schema`: `view`, `create`, `delete`, `edit`, `modify_global_compatibility`
-* `connect`: `view`, `edit`, `create`
+* `connect`: `view`, `edit`, `create`, `restart`
 * `ksql`: `execute`
 * `acl`: `view`, `edit`
 
