@@ -11,7 +11,7 @@
 * [Code of Conduct](project/code-of-conduct.md)
 * [Roadmap](project/roadmap.md)
 
-## 🛠 Development
+## 🧱 Development
 
 * [Contributing](development/contributing.md)
 * [Setting up git](development/setting-up-git.md)
@@ -21,7 +21,7 @@
   * [Without Docker](development/building/without-docker.md)
 * [WIP: Testing](development/wip-testing.md)
 
-## 👷♂ 👷♂ 👷♂ 👷♂ 👷♂ Configuration
+## 🛠 Configuration
 
 * [Quick Start](configuration/quick-start/README.md)
   * [via AWS Marketplace](configuration/quick-start/via-aws-marketplace.md)
@@ -40,7 +40,7 @@
   * [MSK (+Serverless) Setup](configuration/permissions/msk-+serverless-setup.md)
 * [Complex configuration examples](configuration/configuration/complex-configuration-examples/README.md)
   * [Kraft mode + multiple brokers](configuration/configuration/complex-configuration-examples/kraft-mode-+-multiple-brokers.md)
-* [SSL](configuration/ssl.md)
+* [Kafka w/ SSL](configuration/ssl.md)
 * [Authentication](configuration/authentication/README.md)
   * [Basic Authentication](configuration/authentication/basic-authentication.md)
   * [OAuth2](configuration/authentication/oauth2.md)
@@ -51,6 +51,7 @@
 * [RBAC (Role based access control)](configuration/rbac-role-based-access-control/README.md)
   * [Supported Identity Providers](configuration/rbac-role-based-access-control/supported-identity-providers.md)
 * [Data masking](configuration/data-masking.md)
+* [Audit log](configuration/audit-log.md)
 * [Serialization / SerDe](configuration/serialization-serde.md)
 * [OpenDataDiscovery Integration](configuration/opendatadiscovery-integration.md)
 
