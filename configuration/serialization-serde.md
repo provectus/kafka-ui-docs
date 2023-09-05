@@ -14,6 +14,25 @@ Big-endian 4/8 bytes representation of signed/unsigned integers.
 
 Base64 (RFC4648) binary data representation. Can be useful in case if the actual data is not important, but exactly the same (byte-wise) key/value should be send.
 
+#### Hex
+
+[Hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) binary data representation. Bytes delimiter and case can be configured.&#x20;
+
+Class name: `com.provectus.kafka.ui.serdes.builtin.HexSerde`
+
+```
+kafka:
+  clusters:
+    - name: Cluster1
+      # Other Cluster configuration omitted ... 
+      serde:
+        - name: HexWithEditedDelimiter
+          className: com.provectus.kafka.ui.serdes.builtin.HexSerde
+          properties:
+            uppercase: "false"
+            delimiter: ":"
+```
+
 #### String
 
 Treats binary data as a string in specified encoding. Default encoding is UTF-8.
@@ -84,7 +103,9 @@ kafka:
               "topic.2": my.Type2
 ```
 
+#### ProtobufRawDecoder
 
+Deserialize-only serde. Decodes protobuf payload without a predefined schema (like `protoc --decode_raw` command).
 
 #### SchemaRegistry
 
@@ -115,6 +136,8 @@ kafka:
           properties:
             url:  http://another-yet-schema-registry:8081
 ```
+
+
 
 ### Setting serdes for specific topics
 
