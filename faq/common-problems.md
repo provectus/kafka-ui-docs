@@ -10,7 +10,7 @@ A good resource for what properties are needed is here: https://gist.github.com/
 
 ## Cluster authorization failed
 
-Check the [required permissions](../configuration/configuration/required-acls.md).
+Check the [required permissions](../quick-start/prerequisites/permissions/required-acls.md).
 
 ## AWS MSK w/ IAM: Access denied
 

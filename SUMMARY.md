@@ -21,10 +21,19 @@
   * [Without Docker](development/building/without-docker.md)
 * [WIP: Testing](development/wip-testing.md)
 
+## ⚡ Quick Start
+
+* [🔍 Prerequisites](quick-start/prerequisites/README.md)
+  * [Kafka Permissions](quick-start/prerequisites/permissions/README.md)
+    * [Standalone Kafka ACLs](quick-start/prerequisites/permissions/required-acls.md)
+    * [MSK (+Serverless) Setup](quick-start/prerequisites/permissions/msk-+serverless-setup.md)
+* [Demo run](quick-start/demo-run.md)
+* [AWS Marketplace](quick-start/via-aws-marketplace.md)
+* [Persistent start](quick-start/persistent-start.md)
+* [K8s / Helm](quick-start/k8s-helm.md)
+
 ## 🛠 Configuration
 
-* [Quick Start](configuration/quick-start/README.md)
-  * [via AWS Marketplace](configuration/quick-start/via-aws-marketplace.md)
 * [Configuration wizard](configuration/configuration-wizard.md)
 * [Configuration file](configuration/configuration-file.md)
 * [Compose examples](configuration/compose-examples.md)
@@ -35,9 +44,6 @@
   * [Resource limits](configuration/helm-charts/resource-limits.md)
   * [Sticky sessions](configuration/helm-charts/sticky-sessions.md)
 * [Misc configuration properties](configuration/misc-configuration-properties.md)
-* [Required Kafka Permissions](configuration/permissions/README.md)
-  * [Required Kafka ACLs](configuration/configuration/required-acls.md)
-  * [MSK (+Serverless) Setup](configuration/permissions/msk-+serverless-setup.md)
 * [Complex configuration examples](configuration/configuration/complex-configuration-examples/README.md)
   * [Kraft mode + multiple brokers](configuration/configuration/complex-configuration-examples/kraft-mode-+-multiple-brokers.md)
 * [Kafka w/ SSL](configuration/ssl.md)

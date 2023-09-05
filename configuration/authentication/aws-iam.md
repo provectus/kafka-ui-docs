@@ -10,7 +10,7 @@ You could pass SASL configs in the properties section for each cluster.
 
 More details could be found here: [aws-msk-iam-auth](https://github.com/aws/aws-msk-iam-auth)
 
-More about permissions: [msk-+serverless-setup.md](../permissions/msk-+serverless-setup.md "mention")
+More about permissions: [msk-+serverless-setup.md](../../quick-start/prerequisites/permissions/msk-+serverless-setup.md "mention")
 
 ### Examples:
 

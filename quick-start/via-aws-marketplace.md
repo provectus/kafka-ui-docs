@@ -2,7 +2,7 @@
 description: How to Deploy Kafka UI from AWS Marketplace
 ---
 
-# via AWS Marketplace
+# AWS Marketplace
 
 ### Step 1: Go to AWS Marketplace
 
@@ -50,6 +50,6 @@ Example: `ec2-xx-xxx-x-xx.us-west-2.compute.amazonaws.com:8080`
 If your broker is deployed in AWS then allow incoming from Kafka-ui EC2 by adding an ingress rule in the security group which is used for a broker.\
 If your broker is not in AWS then be sure that your broker can handle requests from Kafka-ui EC2 IP address.
 
-More about permissions: [msk-+serverless-setup.md](../permissions/msk-+serverless-setup.md "mention")
+More about permissions: [msk-+serverless-setup.md](prerequisites/permissions/msk-+serverless-setup.md "mention")
 
 That's it! You've successfully deployed the Kafka UI from AWS Marketplace.
