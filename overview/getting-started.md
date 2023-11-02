@@ -10,7 +10,7 @@ docker run -it -p 8080:8080 -e DYNAMIC_CONFIG_ENABLED=true provectuslabs/kafka-u
 
 Then access the web UI at [http://localhost:8080](http://localhost:8080)
 
-The command is sufficient to try things out. When you're done trying things out, you can proceed with a [persistent installation](https://docs.kafka-ui.provectus.io/configuration/quick-start#persistent-start)
+The command is sufficient to try things out. When you're done trying things out, you can proceed with a [persistent installation](getting-started.md#persistent-installation)
 
 ### Persistent installation
 
@@ -27,7 +27,7 @@ services:
       - ~/kui/config.yml:/etc/kafkaui/dynamic_config.yaml
 ```
 
-Please refer to our [configuration](https://docs.kafka-ui.provectus.io/configuration/quick-start) page to proceed with further app configuration.
+Please refer to our [configuration](broken-reference) page to proceed with further app configuration.
 
 ### Some useful configuration-related links
 
