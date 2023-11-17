@@ -31,13 +31,16 @@ KAFKA_CLUSTERS_0_PROPERTIES_SASL_CLIENT_CALLBACK_HANDLER_CLASS='software.amazon.
 {
     "Version": "2012-10-17",
     "Statement": [
+        
         {
             "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": [
+                "kafka-cluster:Connect",
                 "kafka-cluster:DescribeCluster",
                 "kafka-cluster:AlterCluster",
-                "kafka-cluster:Connect"
+                "kafka-cluster:AlterClusterDynamicConfiguration",
+                "kafka-cluster:DescribeClusterDynamicConfiguration",
             ],
             "Resource": "arn:aws:kafka:eu-central-1:297478128798:cluster/test-wizard/7b39802a-21ac-48fe-b6e8-a7baf2ae2533-s2"
         },
@@ -45,22 +48,14 @@ KAFKA_CLUSTERS_0_PROPERTIES_SASL_CLIENT_CALLBACK_HANDLER_CLASS='software.amazon.
             "Sid": "VisualEditor1",
             "Effect": "Allow",
             "Action": [
-                "kafka-cluster:DeleteGroup",
-                "kafka-cluster:DescribeCluster",
                 "kafka-cluster:ReadData",
+                "kafka-cluster:WriteData",
                 "kafka-cluster:DescribeTopicDynamicConfiguration",
                 "kafka-cluster:AlterTopicDynamicConfiguration",
-                "kafka-cluster:AlterGroup",
-                "kafka-cluster:AlterClusterDynamicConfiguration",
                 "kafka-cluster:AlterTopic",
                 "kafka-cluster:CreateTopic",
                 "kafka-cluster:DescribeTopic",
-                "kafka-cluster:AlterCluster",
-                "kafka-cluster:DescribeGroup",
-                "kafka-cluster:DescribeClusterDynamicConfiguration",
-                "kafka-cluster:Connect",
-                "kafka-cluster:DeleteTopic",
-                "kafka-cluster:WriteData"
+                "kafka-cluster:DeleteTopic"
             ],
             "Resource": "arn:aws:kafka:eu-central-1:297478128798:topic/test-wizard/7b39802a-21ac-48fe-b6e8-a7baf2ae2533-s2/*"
         },
@@ -68,8 +63,9 @@ KAFKA_CLUSTERS_0_PROPERTIES_SASL_CLIENT_CALLBACK_HANDLER_CLASS='software.amazon.
             "Sid": "VisualEditor2",
             "Effect": "Allow",
             "Action": [
-                "kafka-cluster:AlterGroup",
-                "kafka-cluster:DescribeGroup"
+                "kafka-cluster:DeleteGroup",
+                "kafka-cluster:DescribeGroup",
+                "kafka-cluster:AlterGroup"
             ],
             "Resource": "arn:aws:kafka:eu-central-1:297478128798:group/test-wizard/7b39802a-21ac-48fe-b6e8-a7baf2ae2533-s2/*"
         }
