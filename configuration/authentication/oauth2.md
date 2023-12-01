@@ -208,5 +208,5 @@ auth:
         client-name: keycloak
         provider: keycloak
         custom-params:
-          type: keycloak
+          type: oauth
 ```
