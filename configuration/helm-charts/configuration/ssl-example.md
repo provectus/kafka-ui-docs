@@ -42,7 +42,7 @@ data:
 ### Create ssl-values.yaml file with the following content.
 
 ```
-existingSecret: "ssl-files"
+existingSecret: "ssl-secret"
 
 
 env:
