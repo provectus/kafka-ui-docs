@@ -26,6 +26,8 @@ Planned, see [#478](https://github.com/provectus/kafka-ui/issues/478)
 
 ### Smart filters syntax
 
+To use smart filters you have to enable groovy filters. To do so just add filtering.groovy.enabled=true in the [configuration](https://docs.kafka-ui.provectus.io/configuration/configuration-file).
+
 **Variables bound to groovy context**: partition, timestampMs, keyAsText, valueAsText, header, key (json if possible), value (json if possible).
 
 **JSON parsing logic**:
@@ -36,7 +38,7 @@ Key and Value (if they can be parsed to JSON) they are bound as JSON objects, ot
 
 1. `keyAsText != null && keyAsText ~"([Gg])roovy"` - regex for key as a string
 2. `value.name == "iS.ListItemax" && value.age > 30` - in case value is json
-3. `value == null && valueAsText != null` - search for values that are not nulls and are not json
+3. `value != null && valueAsText != null` - search for values that are not nulls and are not json
 4. `headers.sentBy == "some system" && headers["sentAt"] == "2020-01-01"`
 5. multiline filters are also allowed:
 
