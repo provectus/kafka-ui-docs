@@ -69,7 +69,7 @@ A role also has a list of _subjects_ which are the entities we will use to assig
 A list of supported providers and corresponding subject fetch mechanism:
 
 * oauth\_google: `user`, `domain`
-* oauth\_github: `user`, `organization`
+* oauth\_github: `user`, `organization`, `team`
 * oauth\_cognito: `user`, `group`
 * ldap: `group`
 * ldap\_ad: (unsupported yet, will do in 0.8 release)
@@ -131,6 +131,9 @@ rbac:
         - provider: oauth_github
           type: user
           value: "memelord"
+        - provider: oauth_github
+          type: team
+          value: "provectus_team"
 
         - provider: oauth_cognito
           type: user

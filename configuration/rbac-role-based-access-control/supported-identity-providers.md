@@ -43,6 +43,9 @@ Set up github auth [first](../authentication/oauth2.md#github)
         - provider: oauth_github
           type: user
           value: "memelord"
+        - provider: oauth_github
+          type: team
+          value: "provectus_team"
 ```
 
 ### Cognito
