@@ -6,7 +6,7 @@ In this article, we'll guide how to set up Kafka-UI with role-based access contr
 
 ### Authentication methods
 
-First of all, you'd need to set up authentication method(s). Refer to [this](https://github.com/provectus/kafka-ui/wiki/OAuth-Configuration) article for OAuth2 setup.
+First of all, you'd need to set up authentication method(s). Refer to [this](https://github.com/provectus/kafka-ui-docs/blob/main/configuration/rbac-role-based-access-control/README.md) article for OAuth2 setup.
 
 ### Config placement
 
