@@ -82,7 +82,7 @@ Not yet supported, see [Issue 3741](https://github.com/provectus/kafka-ui/issues
 
 You can map Okta Groups to roles. First, confirm that your okta administrator has included the `group` claim or the groups will not be passed in the auth token.
 
-Ensure `roles-field` in the auth config is set to `groups` and that `groups` is included in the `scope`, see [here](../authentication/oauth2.md###Okta) for more details.
+Ensure `roles-field` in the auth config is set to `groups` and that `groups` is included in the `scope`, see [here](../authentication/oauth2.md#okta) for more details.
 
 Configure the role mapping to the okta group via generic provider mentioned above:
 
@@ -91,4 +91,19 @@ Configure the role mapping to the okta group via generic provider mentioned abov
         - provider: oauth
           type: role
           value: "<okta-group-name>"
+```
+
+### GoAuthentic
+
+You can map GoAuthentic Groups to roles. First, confirm that your GoAuthentic administrator has included the `profile` claim or the groups will not be passed in the auth token.
+
+Ensure `roles-field` in the auth config is set to `groups` and that `profile` is included in the `scope`, as groups are passed by default in the profile scope. See [here](../authentication/oauth2.md#goauthentic) for more details.
+
+Configure the role mapping to the GoAuthentic group via generic provider mentioned above:
+
+```yaml
+      subjects:
+        - provider: oauth
+          type: role
+          value: "<goauthentic-group-name>"
 ```

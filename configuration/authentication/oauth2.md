@@ -210,3 +210,26 @@ auth:
         custom-params:
           type: keycloak
 ```
+
+### GoAuthentic
+
+```yaml
+auth:
+  type: OAUTH2
+  oauth2:
+    client:
+      goauthentic:
+        provider: goauthentic
+        clientId: xxx
+        clientSecret: yyy
+        scope: [ 'openid', 'profile', 'email' ]
+        client-name: goauthentic
+        issuer-uri: https://<goauthentic_instance>/application/o/<slug>/
+        user-name-attribute: nickname # OR "name", "given_name", "email", "preferred_username"
+        redirect-uri: http://localhost:8080/login/oauth2/code/oauth2
+        authorization-grant-type: authorization_code
+        custom-params:
+          type: oauth
+          roles-field: groups
+          logoutUrl: https://<goauthentic_instance>/application/o/<slug>/end-session/
+```
