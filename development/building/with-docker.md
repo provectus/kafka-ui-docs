@@ -69,7 +69,7 @@ docker-compose -f ./documentation/compose/kafka-clusters-only.yaml up -d
 * Using Helm Charts
 
 ```
-helm repo add kafka-ui https://provectus.github.io/kafka-ui
+helm repo add kafka-ui https://provectus.github.io/kafka-ui-charts
 helm install kafka-ui kafka-ui/kafka-ui
 ```
 
